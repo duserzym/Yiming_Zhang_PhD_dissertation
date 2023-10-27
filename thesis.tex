@@ -1,0 +1,174 @@
+%% thesis.tex 2014/04/11
+%
+% Based on sample files of unknown authorship.
+%
+% The Current Maintainer of this work is Paul Vojta.
+
+\documentclass{ucbthesis}
+\usepackage{biblatex}
+\usepackage{rotating} % provides sidewaystable and sidewaysfigure
+
+% To compile this file, run "latex thesis", then "biber thesis"
+% (or "bibtex thesis", if the output from latex asks for that instead),
+% and then "latex thesis" (without the quotes in each case).
+
+% Double spacing, if you want it.  Do not use for the final copy.
+% \def\dsp{\def\baselinestretch{2.0}\large\normalsize}
+% \dsp
+
+% If the Grad. Division insists that the first paragraph of a section
+% be indented (like the others), then include this line:
+% \usepackage{indentfirst}
+
+\addtolength{\abovecaptionskip}{\baselineskip}
+
+\newtheorem{theorem}{Jibberish}
+
+\bibliography{references}
+
+\hyphenation{mar-gin-al-ia}
+\hyphenation{bra-va-do}
+
+\begin{document}
+
+% Declarations for Front Matter
+
+\title{Paleogeography of Laurentia }
+\author{Yiming Zhang}
+\degreesemester{Summer}
+\degreeyear{2024}
+\degree{Doctor of Philosophy}
+\chair{Professor Nicholas L. Swanson-Hysell}
+\othermembers{Professor Bruce Buffett \\
+   Professor Fernando Perez}
+% For a co-chair who is subordinate to the \chair listed above
+% \cochair{Professor Benedict Francis Pope}
+% For two co-chairs of equal standing (do not use \chair with this one)
+% \cochairs{Professor Richard Francis Sony}{Professor Benedict Francis Pope}
+\numberofmembers{3}
+% Previous degrees are no longer to be listed on the title page.
+% \prevdegrees{B.A. (University of Northern South Dakota at Hoople) 1978 \\
+%   M.S. (Ed's School of Quantum Mechanics and Muffler Repair) 1989}
+\field{Earth \& Planetary Science}
+% Designated Emphasis -- this is optional, and rare
+% \emphasis{Colloidal Telemetry}
+% This is optional, and rare
+% \jointinstitution{University of Western Maryland}
+% This is optional (default is Berkeley)
+% \campus{Berkeley}
+
+% For a masters thesis, replace the above \documentclass line with
+% \documentclass[masters]{ucbthesis}
+% This affects the title and approval pages, which by default calls this
+% document a "dissertation", not a "thesis".
+
+\maketitle
+% Delete (or comment out) the \approvalpage line for the final version.
+\approvalpage
+\copyrightpage
+
+\include{abstract}
+
+\begin{frontmatter}
+
+\begin{dedication}
+\null\vfil
+\begin{center}
+To Ossie Bernosky\\\vspace{12pt}
+And exposition? Of go. No upstairs do fingering. Or obstructive, or purposeful.
+In the glitter. For so talented. Which is confines cocoa accomplished.
+Masterpiece as devoted. My primal the narcotic. For cine? To by recollection
+bleeding. That calf are infant. In clause. Be a popularly. A as midnight
+transcript alike. Washable an acre. To canned, silence in foreign.
+\end{center}
+\vfil\null
+\end{dedication}
+
+% You can delete the \clearpage lines if you don't want these to start on
+% separate pages.
+
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+
+\begin{acknowledgements}
+I am here thanks to the opportunity to work with my advisor Nick Swanson-Hysell. I still remember our first contact via phone and the enthusiasm he expressed toward Earth history and magnetism as we discussed reconstructing a billion-year-old paleointensity records and building a prototype quantum diamond microscope. His drive toward open and reproducible science, putting questions into testable hypothesis, summarizing interpretations into succinct but informative words, and care for details in every aspect of the manuscripts constantly challenged me to be a better scholar. 
+
+I thank my qualification exam committee, including Ben Gilbert, Harriet Lau, and Fernando Perez. I thank Bruce Buffett and Fernando Perez for being on my thesis committee and help me improve my dissertation. 
+
+I thank my collaborators in research. Maggie Avery, Sarah Slotznick, Blake Hodgin, Tadesse Alemu, James Pierce, Anthony Fuentes, Jim Miller, Mark Schmitz, 
+
+
+I thank my advisors for the courses where I taught as a graduate student instructor. I learned a lot about Berkeley local bedrock geology by teaching EPS 101 field geology and digital mapping with Nick Swanson-Hysell three times.  Our course in 2020 and the EPS 50 course with Professor Daniel Stolper taught me to stay positive and keep the enthusiasm about the outdoor and science while the world was at a lock down. I also appreciate the inspiring interactions with Professor Matthew Gleeson in the field as we together taught the field geology class in Fall 2023. 
+
+Institute for Rock Magnetism. US Student Fellowship and summer school, and the opportunity to present my research at the 2023 IRM conference. I thank Bruce Moskowitz, Josh Feinberg, Peter Solheid, Mike Jackson, Maxwell Brown, Dario Bilardello for their patient education during my visits and knowledgable resource. 
+
+
+I thank my office friends for always maintaining a lively atmosphere. They are Danielle Lindsay, 
+
+I am also grateful for the company along the past five years from Nick's family. I have always enjoyed my time in the field together with Sarah, Maddy, and Wilma. I also thank Nick's parents, Tom Hysell and Susan Swanson for letting me stay at their house in January 2020 while I conducted experiments at the Institute for Rock Magnetism for a visiting student fellowship. I thank Ben and Ella Swanson-Hysell for the gatherings admist field seasons. 
+
+Lastly and most importantly, I thank my parents for leading me a path to studying 
+
+I am grateful to the organizations whose funding enabled the research during my graduate course. The funding sources include:
+
+$\bullet$ University of California, Berkeley
+    \vspace{5mm}
+
+    - Hearts to Humanity Eternal Programs
+    \vspace{5mm}
+    
+    - Cheveron-Xenel Gateway Fellowship, Berkeley International House
+    \vspace{5mm}
+    
+    - UC Berkeley student conference travel grant
+\vspace{5mm}
+
+$\bullet$ Institute for Rock magnetism
+    \vspace{5mm}
+    
+    - US visiting student fellowship
+    \vspace{5mm}
+    
+$\bullet$ Institute on Lake Superior Geology
+    \vspace{5mm}
+    
+    - ILSG Student Research Fund
+    \vspace{5mm}
+    
+$\bullet$ Geological Society of America
+    \vspace{5mm}
+    
+    - 2022 GSA Graduate Student Research Grant 
+    \vspace{5mm}
+    
+    - 2023 AGeS3-Grad Geochronology Award
+
+$\bullet$ National Science Foundation
+    \vspace{5mm}
+
+    - Grant career award  (awarded to Nick Swanson-Hysell)
+
+    - Grant FRES  (awarded to Nick Swanson-Hysell)
+
+    - Grant MagIC  (awarded to Nick Swanson-Hysell)
+    
+\end{acknowledgements}
+
+\end{frontmatter}
+
+\pagestyle{headings}
+
+% (Optional) \part{First Part}
+
+\include{chap1}
+\include{chap2}
+
+\printbibliography
+
+% \appendix
+% \chapter{More Monticello Candidates}
+
+\end{document}
