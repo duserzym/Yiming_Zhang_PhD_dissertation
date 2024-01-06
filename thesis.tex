@@ -5,9 +5,25 @@
 % The Current Maintainer of this work is Paul Vojta.
 
 \documentclass{ucbthesis}
-% \usepackage{biblatex}
-\usepackage{natbib} 
-\bibliographystyle{gsabull}
+% \usepackage{natbib} 
+\usepackage[backend=bibtex,style=authoryear,natbib=true,maxcitenames=2,defernumbers=true,giveninits=true,natbib=true]{biblatex}
+\renewbibmacro{in:}{\ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
+\renewbibmacro*{doi+eprint+url}{%
+    \printfield{doi}%
+    \newunit\newblock%
+    \iftoggle{bbx:eprint}{%
+        \usebibmacro{eprint}%
+    }{}%
+    \newunit\newblock%
+    \iffieldundef{doi}{%
+        \usebibmacro{url+urldate}}%
+        {}%
+    }
+
+\usepackage{fontenc}
+\usepackage{graphicx}
+\addbibresource{YZ_ref.bib}
+% \bibliographystyle{gsabull}
 \usepackage{rotating} % provides sidewaystable and sidewaysfigure
 
 % To compile this file, run "latex thesis", then "biber thesis"
@@ -25,9 +41,6 @@
 \addtolength{\abovecaptionskip}{\baselineskip}
 
 \newtheorem{theorem}{Jibberish}
-
-
-\bibliography{references}
 
 
 \hyphenation{mar-gin-al-ia}
@@ -199,6 +212,7 @@ Last but not least, I thank the earth, for being such a beautiful cosmic palimps
 \include{chap4}
 
 
+\bibliography{references}
 \printbibliography
 
 % \appendix
