@@ -5,25 +5,23 @@
 % The Current Maintainer of this work is Paul Vojta.
 
 \documentclass{ucbthesis}
-% \usepackage{natbib} 
-\usepackage[backend=bibtex,style=authoryear,natbib=true,maxcitenames=2,defernumbers=true,giveninits=true,natbib=true]{biblatex}
-\renewbibmacro{in:}{\ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
-\renewbibmacro*{doi+eprint+url}{%
-    \printfield{doi}%
-    \newunit\newblock%
-    \iftoggle{bbx:eprint}{%
-        \usebibmacro{eprint}%
-    }{}%
-    \newunit\newblock%
-    \iffieldundef{doi}{%
-        \usebibmacro{url+urldate}}%
-        {}%
-    }
-
-\usepackage{fontenc}
+%\usepackage{biblatex}
+\usepackage{natbib} % use natbib over biblatex to be able to use GSAB .bst
+\usepackage{textcomp,marvosym}
+\usepackage{amsmath,amssymb}
+\usepackage{pdfpages}
 \usepackage{graphicx}
-\addbibresource{YZ_ref.bib}
-% \bibliographystyle{gsabull}
+\usepackage{xspace}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\usepackage{threeparttable}
+\usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=up]{caption} % change figure caption style
+\usepackage{color,colortbl}
+%\usepackage[table,xcdraw]{xcolor}
+\usepackage{sidecap}
+\usepackage{bibentry}
+\usepackage{multirow}
+\bibliographystyle{gsabull}
 \usepackage{rotating} % provides sidewaystable and sidewaysfigure
 
 % To compile this file, run "latex thesis", then "biber thesis"
@@ -64,13 +62,12 @@
 
 \maketitle
 % Delete (or comment out) the \approvalpage line for the final version.
-\approvalpage
+%\approvalpage
 \copyrightpage
 
-\begin{frontmatter}
-
-
 \include{abstract}
+
+\begin{frontmatter}
 
 \tableofcontents
 \clearpage
@@ -80,11 +77,8 @@
 
 \clearpage
 
-
-\begin{center}
-\textbf{\large Preface}
-\end{center}
-
+\begin{preface}
+	
 The material within the chapters of this dissertation are largely taken from previously published (or soon to be published) articles. The following text identifies these articles, and provides brief summaries of each chapter.
 
 \subsection{Chapter 1 - Synchronous emplacement of the anorthosite xenolith-bearing Beaver River diabase and one of the largest lava flows on Earth}
@@ -98,6 +92,8 @@ The Beaver River diabase contains abundant anorthosite xenoliths liberated from 
 
 Data and code used in this article are available on GitHub at \url{https://github.com/Swanson-Hysell-Group/2021_AX_BD} and on Zenodo at \url{https://zenodo.org/records/5394529}. 
 
+\clearpage 
+
 \subsection{Chapter 2 - High geomagnetic field intensity recorded by anorthosite xenoliths requires a strongly powered late Mesoproterozoic geodynamo}
 
 Zhang, Y., Swanson-Hysell, N.L., Avery, M.S., Fu, R.R., (2022), High geomagnetic field intensity recorded by anorthosite xenoliths requires a strongly powered late Mesoproterozoic geodynamo. PNAS. doi: 10.1073/pnas.2202875119
@@ -106,26 +102,28 @@ Zhang, Y., Swanson-Hysell, N.L., Avery, M.S., Fu, R.R., (2022), High geomagnetic
 Acquiring high-fidelity observational records of ancient magnetic field intensity from the remanent magnetization of rocks is crucial for constraining the long-term evolution of Earth’s core. However, robust estimates of ancient field strengths are often difficult to recover due to alteration or non-ideal rock magnetic behavior. In this contribution, I developed high-quality paleointensity data with the best site-level standard deviation of 0.04 $\mu$T from well-preserved anorthosite xenoliths of the Beaver River diabase which were rapidly emplaced during the ca. 1.1 Ga North America Midcontinent Rift. The primary interpretation for the high paleointensity values gains strong support for there being a strongly powered geodynamo during the late Mesoproterozoic. These observations agree with previous results from Midcontinent Rift volcanic rocks and support such a strong field could have lasted at least 14 Myr. Together, paleointensity records from the Midcontinent Rift are inconsistent with there being a progressive monotonic decay of Earth’s dynamo strength through the Proterozoic Eon.
 Our updated paleointensity data compilation show multiple observed paleointensity transitions from weak to strong in the Phanerozoic and the Proterozoic. Given that these records cannot all be the minimum prior to the beginning of inner core nucleation, they instead could indicate that processes such as plate tectonics could have modulated the core-mantle heat flow pattern in the Proterozoic. Regardless of when the initiation of inner core nucleation occurred, the observation of large variability in paleointensity in the Precambrian may present challenges in detecting the increase in surface geomagnetic field strength predicted by numerical models to have happened at the onset of inner core crystallization.
 
-Data and code used in this article are available on GitHub at \url{https://github.com/Swanson-Hysell-Group/AX_BD_PINT} and on Zenodo at \url{https://doi.org/10.5281/zenodo.6658064}. 
+Data and code used in this article are available on GitHub at \url{https://github.com/Swanson-Hysell-Group/AX_BD_PINT} and on Zenodo at \url{https://doi.org/10.5281/zenodo.6658064}.
+ 
+\clearpage 
 
-\subsection{Chapter 3 - Widespread mafic magmatism across Laurentia in the late Mesoproterozoic: new paleomagnetic data from southwestern Laurentia}
+\subsection{Chapter 3 - Paleomagnetism of the southwest Laurentia large igneous province and Cardenas Basalt: pulsed magmatism during rapid late Mesoproterozoic plate motion}
 
-M.T. Mohr, M.D. Schmitz, N.L. Swanson-Hysell, K.E. Karlstrom; F.A. Macdonald, M.E. Holland, Y. Zhang, N. Anderson. (2024). High-Precision U-Pb geochronology links magmatism in the SW Laurentia Large Igneous Province and Midcontinent Rift. Geology. 
-
-Zhang, Y., Anderson, N., Mohr, M.T., Schmitz, M.D., Macdonald, F.A., Nelson, L.L., Thurston, O.G. Guenthner, W.R., Karlstrom, K.E., Swanson-Hysell, N.L. (2024). Widespread mafic magmatism across Laurentia in the late Mesoproterozoic: new paleomagnetic data from southwestern Laurentia. 
+Mohr, M.T., Schmitz, M.D., Swanson-Hysell, N.L., Karlstrom, K.E., Macdonald, F.A., Holland, M.E., Zhang, Y., Anderson, N. (2024). High-Precision U-Pb geochronology links magmatism in the SW Laurentia Large Igneous Province and Midcontinent Rift. Geology. 
+\\
+\noindent Zhang, Y., Anderson, N., Mohr, M.T., Schmitz, M.D., Macdonald, F.A., Nelson, L.L., Thurston, O.G. Guenthner, W.R., Karlstrom, K.E., Swanson-Hysell, N.L. (2024). Widespread mafic magmatism across Laurentia in the late Mesoproterozoic: new paleomagnetic data from southwestern Laurentia. Submitted to JGR: Solid Earth. 
 \\
 
 High-precision geochronology data show that the emplacement of the ca. 1096 Ma voluminous mafic Duluth Complex and associated $\sim$ 8 km thick lava flows of the North Shore Volcanic Group occurred within 500 Kyr---consistent with these units being a large igneous province. In \cite{Mohr2024a} we show more high-precision geochronology data from the southwestern Laurentia that there was a ca. 1098 Ma pulse of large-igneous-province style mafic magmatism featuring the emplacement of thick mafic sills across at least eastern California and central Arizona. Geochronology data from that work further show that the Cardenas Basalt lava flows which were thought to be surface expressions of the ca. 1098 Ma mafic sills, are actually ca. 1082 Ma in age, indicating that they occurred during a distinct magmatic episode in the Grand Canyon. In this study, I develop new paleomagnetic data from mafic sills in Death Valley with Nick Anderson, and I developed new paleomagnetic data from mafic intrusions and the Cardenas Basalt in the Grand Canyon. These new data help better delineate the extent of the ca. 1098 Ma southwestern Laurentia large igneous province.
 
 Prior to this work, late Mesoproterozoic global paleogeography reconstruction largely depends on the high-quality dataset from the Midcontinent Rift. New paleomagnetic data from this study provides independent support for there being a large latitudinal change in Laurentia's paleogeographic position at the time due to rapid plate tectonic motion. The new paleomagnetic pole from the Cardenas Basalt help further improve Laurentia's apparent polar wander path in the late Mesoproterozoic.
 
-Data and code used Zhang et al., 2024 are available on GitHub at \url{https://github.com/Swanson-Hysell-Group/Cardenas_Unkar} and on Zenodo at \url{https://doi.org/10.5281/zenodo.}.
+Data and code used in this study are available on GitHub at \url{https://github.com/Swanson-Hysell-Group/Cardenas_Unkar} and on Zenodo at \url{https://doi.org/10.5281/zenodo.}.
+
+\clearpage 
 
 \subsection{Chapter 4 - Tracking Rodinia into the Neoproterozoic: new paleomagnetic constraints from the Jacobsville Formation	Tracking Rodinia into the Neoproterozoic: new paleomagnetic constraints from the Jacobsville Formation}
 
-\authors{Yiming Zhang\textsuperscript{1}, Eben B. \textsuperscript{1,2}, Tadesse Alemu\textsuperscript{1}, James \textsuperscript{1,3},  \textsuperscript{1}, Nicholas L. Swanson-Hysell\textsuperscript{1}}
-
-Zhang, Y., Hodgin, E.B., Mohr, M.T., Alemu, T.B., Pierce, J., Fuentes, A.J., Swanson-Hysell, N.L. (2024). Tracking Rodinia into the Neoproterozoic: new paleomagnetic constraints from the Jacobsville Formation	Tracking Rodinia into the Neoproterozoic: new paleomagnetic constraints from the Jacobsville Formation. Tectonics. 
+Zhang, Y., Hodgin, E.B., Mohr, M.T., Alemu, T.B., Pierce, J., Fuentes, A.J., Swanson-Hysell, N.L. (2024). Tracking Rodinia into the Neoproterozoic: new paleomagnetic constraints from the Jacobsville Formation. Tectonics. 
 \\
 
 The assembly of the supercontinent Rodinia in the late Proterozoic is a pivotal event in the history of global tectonics. However, there has been a lack of well-dated paleomagnetic poles for its central piece, cratonic North America, for 300 Myr between the onset of the assembly ca. 1070 Ma and the initial break up of the supercontinent ca. 770 Ma. In this study, I developed high-quality paleomagnetic data from the Jacobsville Formation paired with previously developed state-of-the-art geochronology results to constrain cratonic North America's paleogeographic position ca. 990 Ma. The primary interpretation for this pole gains support from both an intraformational conglomerate test and a fold test. 
@@ -133,6 +131,8 @@ The assembly of the supercontinent Rodinia in the late Proterozoic is a pivotal 
 Our new high-quality paleomagnetic pole shows Laurentia's plate motion to have slowed down significantly following a previous period of rapid plate tectonic motion in the late Mesoproterozoic. Such slowdown in plate motion is coincident with the Grenvillian orogenesis along Laurentia's margin. This aspect of the results is quite interesting in terms of the tectonics and ties in with the geodynamics of the orogeny and supercontinent assembly. Our new pole adds a reliable constraint in the early Neoproterozoic that will be at the heart of future efforts to reconstruct the paleogeography of Rodinia.
 
 Data and code used in this study are available on GitHub at \url{https://github.com/Swanson-Hysell-Group/Jacobsville} and on Zenodo at \url{https://doi.org/10.5281/zenodo.}.
+
+\end{preface}
 
 \begin{acknowledgements}
 I thank my Ph.D. advisor, Nicholas Swanson-Hysell for bringing me to Berkeley. I always look up to him as a role model in scientific research and in life. His adept field geology skills, broad scientific interests and rigorous science ethics constantly challenged me to be a better scholar. I thank Nick for providing many field work opportunities in different places. I especially appreciated that Nick kept his office door open and allowed numerous walk-in discussions. I am also grateful for the company in the past five years from Nick's family. I have always enjoyed my time in the field together with Sarah, Maddy, and Wilma. 
@@ -197,25 +197,34 @@ Last but not least, I thank the earth, for being such a beautiful cosmic palimps
 
 \end{acknowledgements}
 
-
-
-
 \end{frontmatter}
 
 \pagestyle{headings}
 
-% (Optional) \part{First Part}
 
-\include{chap1}
-\include{chap2}
-\include{chap3}
-\include{chap4}
+%%%%%%%%%%%%%%%%%%%%
+%%%%% CHAPTERS %%%%%
+%%%%%%%%%%%%%%%%%%%%
 
+\include{Chap_BBC}
+\include{Chap_PINT}
+\include{Chap_Jacobsville}
+\include{Chap_SWLLIP}
 
-\bibliography{references}
-\printbibliography
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% BIBLIOGRAPHY %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \appendix
-% \chapter{More Monticello Candidates}
+\bibliography{YZ_ref}
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%% APPENDIX %%%%%
+%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\include{SI_BBC}
+\include{SI_PINT}
+\include{SI_Jacobsville}
+\include{SI_SWLLIP}
 
 \end{document}
