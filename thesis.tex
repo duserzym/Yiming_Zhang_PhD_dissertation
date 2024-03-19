@@ -9,7 +9,7 @@
 \usepackage{natbib} % use natbib over biblatex to be able to use GSAB .bst
 \usepackage{textcomp,marvosym}
 \usepackage{amsmath,amssymb}
-\usepackage{pdfpages}
+\usepackage{rotating} % provides sidewaystable and sidewaysfigure
 \usepackage{graphicx}
 \usepackage{xspace}
 \usepackage[hidelinks]{hyperref}
@@ -21,8 +21,8 @@
 \usepackage{sidecap}
 \usepackage{bibentry}
 \usepackage{multirow}
+\usepackage{pdfpages}
 \bibliographystyle{gsabull}
-\usepackage{rotating} % provides sidewaystable and sidewaysfigure
 
 % To compile this file, run "latex thesis", then "biber thesis"
 % (or "bibtex thesis", if the output from latex asks for that instead),
@@ -40,9 +40,6 @@
 
 \newtheorem{theorem}{Jibberish}
 
-
-\hyphenation{mar-gin-al-ia}
-\hyphenation{bra-va-do}
 
 \begin{document}
 % Declarations for Front Matter
@@ -78,7 +75,9 @@
 \clearpage
 
 \begin{preface}
-	
+\phantomsection % make the ToC links work
+\addcontentsline{toc}{chapter}{Preface} % add to ToC
+
 The material within the chapters of this dissertation are largely taken from previously published (or soon to be published) articles. The following text identifies these articles, and provides brief summaries of each chapter.
 
 \subsection{Chapter 1 - Synchronous emplacement of the anorthosite xenolith-bearing Beaver River diabase and one of the largest lava flows on Earth}
@@ -135,6 +134,8 @@ Data and code used in this study are available on GitHub at \url{https://github.
 \end{preface}
 
 \begin{acknowledgements}
+\phantomsection % make the ToC links work
+\addcontentsline{toc}{chapter}{Acknowledgements} % add to ToC
 I thank my Ph.D. advisor, Nicholas Swanson-Hysell for bringing me to Berkeley. I always look up to him as a role model in scientific research and in life. His adept field geology skills, broad scientific interests and rigorous science ethics constantly challenged me to be a better scholar. I thank Nick for providing many field work opportunities in different places. I especially appreciated that Nick kept his office door open and allowed numerous walk-in discussions. I am also grateful for the company in the past five years from Nick's family. I have always enjoyed my time in the field together with Sarah, Maddy, and Wilma. 
 
 I thank Scott Bogue and Margi Rusmore, my research advisors at Occidental College for their encouragement and support for pursuing a doctoral degree. I treasure our meetings at Santa Cruz and Los Angeles in the past five years. I thank my qualification exam committee, including Ben Gilbert, Harriet Lau, and Fernando Perez. I thank Bruce Buffett and Fernando Perez for being on my thesis committee and helping me improve this dissertation. 
@@ -225,6 +226,6 @@ Last but not least, I thank the earth, for being such a beautiful cosmic palimps
 \include{SI_BBC}
 \include{SI_PINT}
 \include{SI_Jacobsville}
-\include{SI_SWLLIP}
+%\include{SI_SWLLIP}
 
 \end{document}
