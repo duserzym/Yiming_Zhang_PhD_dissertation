@@ -13,7 +13,9 @@
 \usepackage{graphicx}
 \usepackage{xspace}
 \usepackage[hidelinks]{hyperref}
-\urlstyle{same}
+% \urlstyle{same}
+\usepackage{url}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 \usepackage{threeparttable}
 \usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=up]{caption} % change figure caption style
 \usepackage{color,colortbl}
@@ -74,6 +76,7 @@
 
 \clearpage
 
+
 \chapter*{Preface}
 \phantomsection % make the ToC links work
 \addcontentsline{toc}{chapter}{Preface} % add to ToC
@@ -85,13 +88,12 @@ The material within the chapters of this dissertation are largely taken from pre
 Zhang, Y., Swanson-Hysell, N.L., Schmitz, M.D., Miller Jr., J.D., and Avery, M.S., (2021), Synchronous emplacement of the anorthosite xenolith-bearing Beaver River diabase and one of the largest lava flows on Earth. Geochemistry, Geophysics, Geosystems. doi: \url{10.1029/2021GC009909}
 \\
 
-While magmatic activity within the 1.1 Ga North American Midcontinent Rift was protracted, it was punctuated by rapid pulses of voluminous magmatic activities. One of these pulses is represented in the massive \textit{ca.} 1096 Ma Duluth Complex while another is the \textit{ca.} 1092 Ma Beaver Bay Complex. A remarkable aspect of the Midcontinent Rift compared to most large igneous provinces is the extensive exposure both of extrusive lava flows and intrusive suites. Typically in a large igneous province one sees either the continental flood basalts (with the intrusions still in the subsurface) or the intrusions (with the extrusive flows having been eroded away). The exposure of both intrusive and extrusive units provides opportunities to more fully characterize the magmatic system and establish linkages. In this study, I developed paleomagnetic directional data from the anorthosite and the diabase, and collaborated with Professor Mark Schmitz and Professor Jim Miller to use paleomagnetic data, geochronology data, and geochemistry data to establish such an intrusive-extrusive connection. We show evidence that the anorthosite-bearing Beaver River diabase outcropping in northeastern Minnesota acted as a feeder system for the Greenstone Flow --- one of the largest single mafic lava flows on Earth.
+While magmatic activity within the 1.1 Ga North American Midcontinent Rift was protracted, it was punctuated by rapid pulses of voluminous magmatic activities. One of these pulses is the massive \textit{ca.} 1096 Ma Duluth Complex while another is the \textit{ca.} 1092 Ma Beaver Bay Complex. A remarkable aspect of the Midcontinent Rift compared to most large igneous provinces is the extensive exposure both of extrusive lava flows and intrusive suites. Typically, in a large igneous province one sees either the continental flood basalts (with the intrusions still in the subsurface) or the intrusions (with the extrusive flows having been eroded away). The exposure of both intrusive and extrusive units provides opportunities to more fully characterize the magmatic system and establish linkages. In this study, I developed paleomagnetic directional data from anorthosite xenoliths and their diabase of the Beaver Bay Complex, and collaborated with Professor Mark Schmitz and Professor Jim Miller to use paleomagnetic data, geochronology data, and geochemistry data to establish such an intrusive-extrusive connection. We show evidence that the anorthosite-bearing Beaver River diabase outcropping in northeastern Minnesota acted as a feeder system for the Greenstone Flow --- one of the largest single mafic lava flows on Earth.
 
-The Beaver River diabase contains abundant anorthosite xenoliths liberated from a lower crustal cumulate. These xenoliths can exceed 150 meters which illuminates the large magma transfer enabled by wide conduits as magma transited to the near-surface and erupted into the rift basin. Thermal history modeling, U-Pb geochronology and paleomagnetic data from these anorthosite xenoliths illuminates their origin and history. Overall, we highlight that the rapid emplacement of the intrusive Beaver River diabase, anorthosite xenoliths therein, and the extrusive Greenstone Flow together punctuate a rapid and voluminous magmatic activity \textit{ca.} 1092 Ma during the Midcontinent Rift. 
+The Beaver River diabase contains abundant anorthosite xenoliths liberated from a lower crustal cumulate. These xenoliths can exceed 150 meters which illuminates the large magma transfer enabled by wide conduits as magma transited to the near-surface and erupted into the rift basin. Thermal history modeling, U-Pb geochronology and paleomagnetic data from these anorthosite xenoliths give insights into their origin and history. Overall, we highlight that the rapid emplacement of the intrusive Beaver River diabase, anorthosite xenoliths therein, and the extrusive Greenstone Flow together punctuate a rapid and voluminous magmatic activity \textit{ca.} 1092 Ma during the Midcontinent Rift. 
 
 Data and code used in this article are available on GitHub at \url{https://github.com/Swanson-Hysell-Group/2021_AX_BD} and on Zenodo at \url{https://zenodo.org/records/5394529}. 
 
-\clearpage 
 
 \subsection{Chapter 2 - High geomagnetic field intensity recorded by anorthosite xenoliths requires a strongly powered late Mesoproterozoic geodynamo}
 
@@ -102,47 +104,48 @@ Acquiring high-fidelity observational records of ancient magnetic field intensit
 Our updated paleointensity data compilation show multiple observed paleointensity transitions from weak to strong in the Phanerozoic and the Proterozoic. Given that these records cannot all be the minimum prior to the beginning of inner core nucleation, they instead could indicate that processes such as plate tectonics could have modulated the core-mantle heat flow pattern in the Proterozoic. Regardless of when the initiation of inner core nucleation occurred, the observation of large variability in paleointensity in the Precambrian may present challenges in detecting the increase in surface geomagnetic field strength predicted by numerical models to have happened at the onset of inner core crystallization.
 
 Data and code used in this article are available on GitHub at \url{https://github.com/Swanson-Hysell-Group/AX_BD_PINT} and on Zenodo at \url{https://doi.org/10.5281/zenodo.6658064}.
- 
-\clearpage 
+
 
 \subsection{Chapter 3 - Paleomagnetism of the southwest Laurentia large igneous province and Cardenas Basalt: pulsed magmatism during rapid late Mesoproterozoic plate motion}
 
-Mohr, M.T., Schmitz, M.D., Swanson-Hysell, N.L., Karlstrom, K.E., Macdonald, F.A., Holland, M.E., Zhang, Y., Anderson, N. (2024). High-Precision U-Pb geochronology links magmatism in the SW Laurentia Large Igneous Province and Midcontinent Rift. Geology. 
+Mohr, M.T., Schmitz, M.D., Swanson-Hysell, N.L., Karlstrom, K.E., Macdonald, F.A., Holland, M.E., Zhang, Y., Anderson, N. (2024). High-Precision U-Pb geochronology links magmatism in the SW Laurentia Large Igneous Province and Midcontinent Rift. Geology. doi: 10.1130/g51786.1
 \\
-\noindent Zhang, Y., Anderson, N., Mohr, M.T., Schmitz, M.D., Macdonald, F.A., Nelson, L.L., Thurston, O.G. Guenthner, W.R., Karlstrom, K.E., Swanson-Hysell, N.L. (2024). Widespread mafic magmatism across Laurentia in the late Mesoproterozoic: new paleomagnetic data from southwestern Laurentia. Submitted to JGR: Solid Earth. 
+
+\noindent Zhang, Y., Anderson, N., Mohr, M.T., Schmitz, M.D., Macdonald, F.A., Nelson, L.L., Thurston, O.G. Guenthner, W.R., Karlstrom, K.E., Swanson-Hysell, N.L. (in review). Widespread mafic magmatism across Laurentia in the late Mesoproterozoic: new paleomagnetic data from southwestern Laurentia. Submitted to JGR: Solid Earth. 
 \\
 
 High-precision geochronology data show that the emplacement of the ca. 1096 Ma voluminous mafic Duluth Complex and associated $\sim$ 8 km thick lava flows of the North Shore Volcanic Group occurred within 500 Kyr---consistent with these units being a large igneous province. In \cite{Mohr2024a} we show more high-precision geochronology data from the southwestern Laurentia that there was a ca. 1098 Ma pulse of large-igneous-province style mafic magmatism featuring the emplacement of thick mafic sills across at least eastern California and central Arizona. Geochronology data from that work further show that the Cardenas Basalt lava flows which were thought to be surface expressions of the ca. 1098 Ma mafic sills, are actually ca. 1082 Ma in age, indicating that they occurred during a distinct magmatic episode in the Grand Canyon. In this study, I develop new paleomagnetic data from mafic sills in Death Valley with Nick Anderson, and I developed new paleomagnetic data from mafic intrusions and the Cardenas Basalt in the Grand Canyon. These new data help better delineate the extent of the ca. 1098 Ma southwestern Laurentia large igneous province.
 
 Prior to this work, late Mesoproterozoic global paleogeography reconstruction largely depends on the high-quality dataset from the Midcontinent Rift. New paleomagnetic data from this study provides independent support for there being a large latitudinal change in Laurentia's paleogeographic position at the time due to rapid plate tectonic motion. The new paleomagnetic pole from the Cardenas Basalt help further improve Laurentia's apparent polar wander path in the late Mesoproterozoic.
 
-Data and code used in this study are available on GitHub at \url{https://github.com/Swanson-Hysell-Group/Cardenas_Unkar} and on Zenodo at \url{https://doi.org/10.5281/zenodo.}.
-
-\clearpage 
+Data and code used in this study are available on GitHub at \url{https://github.com/Swanson-Hysell-Group/2024_SWLLIP} and on Zenodo at \url{https://doi.org/10.5281/zenodo}.
 
 \subsection{Chapter 4 - Tracking Rodinia into the Neoproterozoic: new paleomagnetic constraints from the Jacobsville Formation}
 
-Zhang, Y., Hodgin, E.B., Mohr, M.T., Alemu, T.B., Pierce, J., Fuentes, A.J., Swanson-Hysell, N.L. (2024). Tracking Rodinia into the Neoproterozoic: new paleomagnetic constraints from the Jacobsville Formation. Tectonics. 
+Zhang, Y., Hodgin, E.B., Mohr, M.T., Alemu, T.B., Pierce, J., Fuentes, A.J., Swanson-Hysell, N.L. (2024). Tracking Rodinia into the Neoproterozoic: new paleomagnetic constraints from the Jacobsville Formation. Tectonics. doi: 10.1029/2023TC007866
 \\
 
-The assembly of the supercontinent Rodinia in the late Proterozoic is a pivotal event in the history of global tectonics. However, there has been a lack of well-dated paleomagnetic poles for its central piece, cratonic North America, for 300 Myr between the onset of the assembly ca. 1070 Ma and the initial break up of the supercontinent ca. 770 Ma. In this study, I developed high-quality paleomagnetic data from the Jacobsville Formation paired with previously developed state-of-the-art geochronology results to constrain cratonic North America's paleogeographic position ca. 990 Ma. The primary interpretation for this pole gains support from both an intraformational conglomerate test and a fold test. 
+The assembly of the supercontinent Rodinia in the late Proterozoic is a pivotal event in the history of global tectonics. However, there has been a lack of well-dated paleomagnetic poles for its central piece, cratonic North America, for 300 Myr between the onset of the assembly ca. 1070 Ma and the initial break up of the supercontinent ca. 770 Ma. In this study, I developed high-quality paleomagnetic data from the Jacobsville Formation and pair them with previously developed state-of-the-art geochronology results to constrain cratonic North America's paleogeographic position ca. 990 Ma. High-resolution thermal demagnetization experiments on the siltstone and fine-grained sandstone facies of the Jacobsville Formation resulted in successful isolation of the primary detrital magnetization from the secondary overprints. The primary interpretation for the detrital paleomagnetic pole gains support from both an intraformational conglomerate test and a fold test. 
  
-Our new high-quality paleomagnetic pole shows Laurentia's plate motion to have slowed down significantly following a previous period of rapid plate tectonic motion in the late Mesoproterozoic. Such slowdown in plate motion is coincident with the Grenvillian orogenesis along Laurentia's margin. This aspect of the results is quite interesting in terms of the tectonics and ties in with the geodynamics of the orogeny and supercontinent assembly. Our new pole adds a reliable constraint in the early Neoproterozoic that will be at the heart of future efforts to reconstruct the paleogeography of Rodinia.
+Using the statistical method that we developed in the study of \cite{Pierce2022a}, we were able to quantitatively represent the uncertainties associated with the inclination shallowing issue in the Jacobsville paleomagnetic records. Our new high-quality paleomagnetic pole shows Laurentia's plate motion to have slowed down significantly following a previous period of rapid plate tectonic motion in the late Mesoproterozoic. Such slowdown in plate motion is coincident with the Grenvillian orogenesis along Laurentia's margin. This result ties in with the geodynamics of the orogeny and supercontinent assembly. The new pole adds a reliable constraint in the early Neoproterozoic that will be at the heart of future efforts to reconstruct the paleogeography of Rodinia.
 
 Data and code used in this study are available on GitHub at \url{https://github.com/Swanson-Hysell-Group/Jacobsville} and on Zenodo at \url{https://doi.org/10.5281/zenodo.}.
 
 \begin{acknowledgements}
 \phantomsection % make the ToC links work
 \addcontentsline{toc}{chapter}{Acknowledgements} % add to ToC
-I thank my Ph.D. advisor, Nicholas Swanson-Hysell for bringing me to Berkeley. I always look up to him as a role model in scientific research and in life. His adept field geology skills, broad scientific interests and rigorous science ethics constantly challenged me to be a better scholar. I thank Nick for providing many field work opportunities in different places. I especially appreciated that Nick kept his office door open and allowed numerous walk-in discussions. I am also grateful for the company in the past five years from Nick's family. I have always enjoyed my time in the field together with Sarah, Maddy, and Wilma. 
 
-I thank Scott Bogue and Margi Rusmore, my research advisors at Occidental College for their encouragement and support for pursuing a doctoral degree. I treasure our meetings at Santa Cruz and Los Angeles in the past five years. I thank my qualification exam committee, including Ben Gilbert, Harriet Lau, and Fernando Perez. I thank Bruce Buffett and Fernando Perez for being on my thesis committee and helping me improve this dissertation. 
+I thank my parents for supporting my study abroad in the past eight years. It is a privilege to be able to experience both the oriental and occidental lives, and to find my own identity through studying and traveling.
 
-I thank my advisors for the courses where I taught as a graduate student instructor. I learned a lot about Berkeley local bedrock geology by teaching EPS 101 field geology and digital mapping with Nick Swanson-Hysell and Matt Gleeson. The special 2020 COVID edition of video shooting the field geology class will be a life-long memory. I thank Daniel Stolper for the EPS 50 course in Spring 2021. Engaging with undergraduate student through EPS 50 lab sessions helped me stay positive and enthusiastic while the world was at a lock down. 
+I thank my Ph.D. advisor, Nicholas Swanson-Hysell for admitting me as a student. I always look up to him as a role model in science and life. His adept field geology skills, broad scientific interests and rigorous science ethics constantly challenged me to be a better scholar. I thank Nick for providing many field work opportunities around the globe in the past five years. I especially appreciate that Nick kept his office door open and allowed numerous walk-in discussions. I am also grateful for the company in the field and lab from Nick's family. I have always enjoyed my time in the field together with Sarah, Maddy, and Wilma. 
 
-I thank John Grimsich for providing me with hands-on experiences on the many excellent instruments hosted at Berkeley EPS. I am grateful for the many hours that John spent teaching me to make professional petrographic thin sections, tuning and using scanning electron microscopes, and using X-ray diffraction machine. I very much appreciate John's curiosity over wide topics and enjoyed our daily interactions working together. 
+I thank Scott Bogue and Margi Rusmore, my research advisors at Occidental College for their encouragement and support toward pursuing a doctoral degree. I treasure our meetings at Santa Cruz and Los Angeles in the past five years. 
 
-I especially thank my parents for supporting my study abroad in the past eight years. It is a privilege to be able to experience the oriental and occidental lives, and to find my own definition through studying and traveling. 
+I thank my qualification exam committee, including Professor Ben Gilbert, Professor Harriet Lau, and Professor Fernando Perez for providing guidance in the first two years of Ph.D. I thank Professor Bruce Buffett and Professor Seth Finnegan for being on my thesis committee and helping me improve this dissertation. 
+
+I thank my advisors for the courses where I taught as a graduate student instructor. I learned a lot about Berkeley local bedrock geology by teaching EPS 101 Field Geology and Digital Mapping with Nick and Professor Matt Gleeson. The special 2020 COVID edition of video shooting the field geology class with Nick will be a life-long memory. I thank Daniel Stolper for his guidance during the EPS 50 course in Spring 2021. Engaging with undergraduate students through EPS 50 lab sessions helped me stay positive and enthusiastic while the world was in a lockdown. 
+
+I thank John Grimsich for providing me with hands-on experiences on many excellent instruments hosted at Berkeley EPS. I am grateful for the countless hours that John spent teaching me to make professional petrographic thin sections, tuning and using scanning electron microscopes, using the X-ray diffraction machine, and crafting custom-build research equipment. I also treasure our occasional geology hikes in the Bay Area.  
 
 I am grateful to the organizations whose funding enabled the research during my graduate course. The funding sources include:
 
@@ -183,7 +186,7 @@ $\bullet$ Geological Society of America
 $\bullet$ National Science Foundation
     \vspace{5mm}
 
-    \hspace{\parindent} - Grant career award  (awarded to Nick Swanson-Hysell)
+    \hspace{\parindent} - Grant Career award  (awarded to Nick Swanson-Hysell)
     \vspace{5mm}
     
     \hspace{\parindent} - Grant FRES  (awarded to Nick Swanson-Hysell)
@@ -192,7 +195,7 @@ $\bullet$ National Science Foundation
     \hspace{\parindent} - Grant MagIC  (awarded to Nick Swanson-Hysell)
     \vspace{15mm}
     
-Last but not least, I thank the earth, for being such a beautiful cosmic palimpsest. 
+I thank the earth, for being such a beautiful cosmic palimpsest. 
 
 \end{acknowledgements}
 
@@ -204,11 +207,11 @@ Last but not least, I thank the earth, for being such a beautiful cosmic palimps
 %%%%%%%%%%%%%%%%%%%%
 %%%%% CHAPTERS %%%%%
 %%%%%%%%%%%%%%%%%%%%
-
+\include{Chap_Intro}
 \include{Chap_BBC}
 \include{Chap_PINT}
-\include{Chap_Jacobsville}
 \include{Chap_SWLLIP}
+\include{Chap_Jacobsville}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% BIBLIOGRAPHY %%%%%
@@ -223,7 +226,7 @@ Last but not least, I thank the earth, for being such a beautiful cosmic palimps
 \appendix
 \include{SI_BBC}
 \include{SI_PINT}
-\include{SI_Jacobsville}
 \include{SI_SWLLIP}
+\include{SI_Jacobsville}
 
 \end{document}
