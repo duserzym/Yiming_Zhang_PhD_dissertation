@@ -14,5 +14,7 @@ Reconstructing late Proterozoic magmatism, geomagnetic field behavior, and paleo
 ## Committee:
 
 Professor Nicholas L. Swanson-Hysell (chair)
+
 Professor Bruce A. Buffett
+
 Professor Seth Finnegan
